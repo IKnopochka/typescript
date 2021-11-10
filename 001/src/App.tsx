@@ -10,17 +10,31 @@ function App() {
     console.log("App rendering")
     return (
         <div>
-            <AppTitle/>
-            <Rating/>
-            <Accordion/>
-            <Rating/>
+            <PageTitle title={"This is APP component"}/>
+            <PageTitle title={"The 2nd key"}/>
+            <Rating value={0} />
+            <Accordion title={"Menu"} body={<ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>}/>
+            <Accordion title={"Ingredients"} body={<ul>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ul>}/>
+            <Rating value={1} />
+            <Rating value={2} />
+            <Rating value={3} />
+            <Rating value={4} />
+            <Rating value={5} />
         </div>
     );
 }
 
-function AppTitle() {
-    console.log("AppTitle rendering")
-    return <>This is APP component</>
+function PageTitle(props: any) {
+    console.log("PageTitle rendering")
+    return <h1>{ props.title }</h1>
 }
 
 export default App;
