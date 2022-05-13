@@ -37,6 +37,13 @@ export const ControlledCheckBox = () => {
     </div>
 }
 export const ControlledSelect = () => {
-
+    const [parentValue, setParentValue] = useState<undefined | string>(undefined)
+    return <div>
+        <select value={parentValue} onChange={(e) => {setParentValue(e.currentTarget.value)}}>
+            <option value={'1'}>none</option>
+            <option value={"2"}>Minsk</option>
+            <option value={"3"}>LA</option>
+        </select>
+    </div>
 }
 
