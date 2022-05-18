@@ -13,6 +13,8 @@ import {
     TrackValueOfUncontrolledInput,
     UncontrolledInput
 } from "./components/UncontrolledInput/UncontrolledInput";
+import Select from "./components/Select/Select";
+import {v1} from "uuid";
 
 //function declaration
 function App() {
@@ -24,6 +26,14 @@ function App() {
     let [onOffValue, setOnOffValue] = useState<propsSwitch>(false)
 
     const items = [ "1", "2", "3"]
+
+    const Item = [
+        {id: v1(), title: 'LA', value: 1 },
+        {id: v1(), title: 'Minsk', value: 2 },
+        {id: v1(), title: 'SanDiego', value: 3 },
+        {id: v1(), title: 'Limassol', value: 4 },
+        {id: v1(), title: 'Pinsk', value: 5 },
+    ]
 
     //function does smth useful
     //must return JSX
@@ -59,6 +69,8 @@ function App() {
             <ControlledCheckBox/>
 
             <ControlledSelect/>
+
+            <Select items={Item} value={""} onChange={() => ({})}/>
 
         </div>
     );

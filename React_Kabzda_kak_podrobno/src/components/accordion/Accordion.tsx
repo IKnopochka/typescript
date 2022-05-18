@@ -50,18 +50,9 @@ type AccordionBodyPropsType = {
 function AccordionBody(props: AccordionBodyPropsType) {
     console.log("AccordionBody rendering")
     return <ul>
-        {props.items.map((m, index) => {
-            return <li key={index}>{m}</li>
+        {props.items.map((m, index) => {<li key={index}>{m}</li>
         })}
     </ul>
-
-
-    /*<ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>)*/
-
 }
 
 export default Accordion;
