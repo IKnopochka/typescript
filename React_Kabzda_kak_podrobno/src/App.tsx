@@ -32,7 +32,7 @@ function App() {
         {id: v1(), title: 'Minsk', value: 2 },
         {id: v1(), title: 'SanDiego', value: 3 },
         {id: v1(), title: 'Limassol', value: 4 },
-        {id: v1(), title: 'Pinsk', value: 5 },
+        {id: v1(), title: 'Pinsk', value: 5 }
     ]
 
     //function does smth useful
