@@ -29,6 +29,6 @@ export const Example1 = () => {
         <button onClick={() => setCounter(counter + 1)}></button>
         <button onClick={addUser}></button>
         <NewMessagesCounter count={counter}/>
-        <Users users={user}/>
+        <Users books={user}/>
     </>
 }

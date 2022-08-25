@@ -41,6 +41,7 @@ export const DifficultCounting = () => {
     </>
 }
 
+///Next one
 
 const UsersSecret = (props: { users: Array<string> }) => {
     console.log('UsersSecret redrawing')
@@ -66,6 +67,9 @@ export const useMemoHelpsReactMemo = () => {
         <button onClick={() => setUsers([...users, 'Kinder'])}>addUser</button>
         {counter}
 
-        <Users users={newArrayOfUsers}/>
+        <Users books={newArrayOfUsers}/>
     </>
 }
+
+//Next one
+
