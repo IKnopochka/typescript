@@ -1,0 +1,16 @@
+.container {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(230, 192, 176);
+    border-radius: 50%;
+    position: relative;
+}
+
+.stick {
+    width: 4px;
+    height: 50%;
+    background: #124f5b;
+    z-index: 10;
+    margin: 0 auto;
+    transform-origin: 0px 100%;
+}

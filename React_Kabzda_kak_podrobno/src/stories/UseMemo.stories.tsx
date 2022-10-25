@@ -67,7 +67,7 @@ export const useMemoHelpsReactMemo = () => {
         <button onClick={() => setUsers([...users, 'Kinder'])}>addUser</button>
         {counter}
 
-        <Users books={newArrayOfUsers}/>
+        <Users users={newArrayOfUsers}/>
     </>
 }
 
