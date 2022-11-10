@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
-import {DigitalClock} from "./DigitalClock";
+import {Clock} from "./Clock";
 import './style.css';
 
 export default {
     title: 'Clock'
 }
 
-export const DigitalClockExample = () => <DigitalClock/>
+export const DigitalClockExample = () => <Clock mode={'digital'}/>
 
 export const AnalogClockExample = () => {
 
@@ -35,3 +35,5 @@ export const AnalogClockExample = () => {
         );
 
 }
+
+export const BaseAnalogClockExample = () => <Clock mode={'analog'}/>
