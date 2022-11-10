@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import React from "react";
 
 export default {
@@ -77,5 +77,74 @@ export const SetIntervalExample = () => {
         counter: {counter}
         {/*<button onClick={() => setCounter(counter + 1)}> Count+ </button>
         <button onClick={() => setFake(fake + 1)}> Fake+ </button>*/}
+    </>
+}
+
+export const ResetEffectExample = () => {
+
+    const [counter, setCounter] = useState(0)
+
+    console.log('ResetEffectExample ')
+
+    useEffect(() => {
+        console.log('effect occurred')
+
+        return () => {
+            console.log('RESET EFFECT')
+        }
+    }, [])
+
+    return <>
+        Hello, counter: {counter}
+        <button onClick={() => {setCounter(counter+1)}}>Click</button>
+    </>
+}
+
+export const KeysTrackerExample = () => {
+
+    const [text, setText] = useState('')
+
+    console.log('KeysTrackerExampleqq ')
+
+    useEffect(() => {
+        const handler = (event: KeyboardEvent) => {
+            console.log(event.key)
+            setText((state) => state + event.key)
+        }
+        window.addEventListener('keypress', handler)
+
+        return () => {
+            console.log('RESET EFFECT')
+            window.removeEventListener('keypress', handler)
+        }
+
+    }, [])
+
+    return <>
+        Typed text: {text}
+    </>
+}
+export const SetTimeoutEffectReturnExample = () => {
+
+    const [text, setText] = useState('')
+
+    console.log('KeysTrackerExampleqq ')
+
+    useEffect(() => {
+        const handler = (event: KeyboardEvent) => {
+            console.log(event.key)
+            setText((state) => state + event.key)
+        }
+        window.addEventListener('keypress', handler)
+
+        return () => {
+            console.log('RESET EFFECT')
+            window.removeEventListener('keypress', handler)
+        }
+
+    }, [])
+
+    return <>
+        Typed text: {text}
     </>
 }
